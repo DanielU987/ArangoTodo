@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <title>Hello, world!</title>
 </head>
@@ -38,11 +39,11 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                Close
-              </button>
+                                Close
+                            </button>
                             <button type="submit" class="btn btn-primary">
-                Create post
-              </button>
+                                Create post
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -58,9 +59,10 @@
                 <th scope="col">_id</th>
                 <th scope="col">_rev</th>
                 <th scope="col">Value</th>
-                <th scope="col"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Create
-          </button></th>
+                <th scope="col"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create
+                    </button></th>
             </tr>
         </thead>
         <tbody>
@@ -83,43 +85,51 @@
                     </td>
 
                     <td>
-                        <a href="/delete?id=<%= cursor._key %>" class="btn btn-primary btn-danger" role="button" aria-pressed="true">delete</a>
-                        <button type="button" class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#Modal<%= index %>">edit</button>
-                        <div class="modal fade" id="Modal<%= index %>" tabindex="1" aria-labelledby="Modal<%= index%>Label" aria-hidden="true">
+                        <a href="/delete?id=<%= cursor._key %>" class="btn btn-primary btn-danger" role="button"
+                            aria-pressed="true">delete</a>
+                        <button type="button" class="btn btn-primary btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#Modal<%= index %>">edit</button>
+                        <div class="modal fade" id="Modal<%= index %>" tabindex="1"
+                            aria-labelledby="Modal<%= index%>Label" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h1 class="modal-title fs-5" id="Modal<%= index %>Label">
                                             Modal titles
                                         </h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
                                     <form action="/edit" method="post">
                                         <div class="modal-body">
                                             <label for="basic-url" class="form-label">Key:</label>
                                             <div class="input-group mb-3">
-                                                <input name="_key" id="basic-url" type="text" value="<%= cursor._key %>" class="form-control" />
+                                                <input name="_key" id="basic-url" type="text" value="<%= cursor._key %>"
+                                                    class="form-control" />
                                             </div>
                                             <label for="basic-url1" class="form-label">Id:</label>
                                             <div class="input-group mb-3">
-                                                <input id="basic-url1" type="text" class="form-control" value="<%= cursor._id %>" disabled />
+                                                <input id="basic-url1" type="text" class="form-control"
+                                                    value="<%= cursor._id %>" disabled />
                                             </div>
                                             <label for="basic-url2" class="form-label">Rev:</label>
                                             <div class="input-group mb-3">
-                                                <input id="basic-url2" type="text" class="form-control" value="<%= cursor._rev %>" disabled />
+                                                <input id="basic-url2" type="text" class="form-control"
+                                                    value="<%= cursor._rev %>" disabled />
                                             </div>
                                             <label for="basic-url3" class="form-label">Value:</label>
                                             <div class="input-group mb-3">
-                                                <input name="value" id="basic-url3" type="text" class="form-control" value="<%= cursor.value %>" />
+                                                <input name="value" id="basic-url3" type="text" class="form-control"
+                                                    value="<%= cursor.value %>" />
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                          Close
-                        </button>
+                                                Close
+                                            </button>
                                             <button type="submit" class="btn btn-primary">
-                          update post
-                        </button>
+                                                update post
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
@@ -130,7 +140,9 @@
                 <% }) %>
         </tbody>
     </table>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
